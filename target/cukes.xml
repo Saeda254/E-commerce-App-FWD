@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="159.157">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="21.331">
+        <system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "saeeda" and last name "mohamed"..................passed
+And user enter date of birth................................................passed
+And user enter email "saeeda@mail.com" field................................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="9.693">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "saeda@mail.com" and "P@ssw0rd"................passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="9.283">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "saeda@mail.com" and "P@ssw0rd"..............passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03  User could search home page products using Euro currency" name="User could switch between currencies US-Euro" time="7.835">
+        <system-out><![CDATA[When user select euro currency..............................................passed
+Then user can find euro symbol displayed in home page products..............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 User could search for any product" name="1 user could search using product name" time="5.889">
+        <system-out><![CDATA[When user clicks in search filed............................................passed
+And user Type product name as "book"........................................passed
+Then user find relevant products............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 User could search for any product" name="1 user could search using product name 2" time="5.753">
+        <system-out><![CDATA[When user clicks in search filed............................................passed
+And user Type product name as "laptop"......................................passed
+Then user find relevant products............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 User could search for any product" name="1 user could search using product name 3" time="5.908">
+        <system-out><![CDATA[When user clicks in search filed............................................passed
+And user Type product name as "nike"........................................passed
+Then user find relevant products............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku" time="14.406">
+        <system-out><![CDATA[When user clicks in search filed............................................passed
+And user Type product sku as "SCI_FAITH"....................................passed
+Then "SCI_FAITH" shown in result page.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku 2" time="14.799">
+        <system-out><![CDATA[When user clicks in search filed............................................passed
+And user Type product sku as "APPLE_CAM"....................................passed
+Then "APPLE_CAM" shown in result page.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku 3" time="14.022">
+        <system-out><![CDATA[When user clicks in search filed............................................passed
+And user Type product sku as "SF_PRO_11"....................................passed
+Then "SF_PRO_11" shown in result page.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F05  user could hover categories and select sub Category" name="user could hover categories" time="16.338">
+        <system-out><![CDATA[When user could hover categories and select sub Category....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could select home page sliders" name="2:  first slider is clickable on home page" time="7.501">
+        <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on first slider............................................passed
+And user select product of first slider.....................................passed
+Then user go to first product page..........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.P03_homePage.getFirstSliderProductUrl(P03_homePage.java:160)
+	at org.example.stepDefs.D06_homeSlidersStepDef.user_go_first_product_page(D06_homeSlidersStepDef.java:23)
+	at ✽.user go to first product page(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="user could select home page sliders" name="2: second slider is clickable on home page" time="7.391">
+        <failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on second slider...........................................passed
+And user select product of Second slider....................................passed
+Then user go to second product page.........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.P03_homePage.getSecondSliderProductUrl(P03_homePage.java:188)
+	at org.example.stepDefs.D06_homeSlidersStepDef.user_go_second_product_page(D06_homeSlidersStepDef.java:38)
+	at ✽.user go to second product page(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="user could add products to wishlist" name="success message is visible after adding product to wishlist" time="9.013">
+        <system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could add products to wishlist" name="added product is displayed in wishlist page" time="9.57">
+        <system-out><![CDATA[When user add product to wishlist again.....................................passed
+Then wishlist notification success is visible...............................passed
+And user go to wishlist page................................................passed
+Then number of quantity is greater than zero in wishlist page...............passed
+]]></system-out>
+    </testcase>
+</testsuite>
