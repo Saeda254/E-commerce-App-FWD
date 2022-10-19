@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="6" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="283.036">
-    <testcase classname="Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="31.377">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico\-account&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [dfaf612098aa19bcb4eda3386fe869e7, findElement {using=class name, value=ico-account}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56160}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56160/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: dfaf612098aa19bcb4eda3386fe869e7" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user go to login page.................................................passed
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="239.771">
+    <testcase classname="Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="30.096">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico\-account&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [45b7cbc904bf435cc44218459693a3f3, findElement {using=class name, value=ico-account}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59330}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59330/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 45b7cbc904bf435cc44218459693a3f3" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user go to login page.................................................passed
 When user login with "valid" "SAEDA@FWD.com" and "123456789"................passed
 And user press on login button..............................................passed
 Then user login to the system successfully..................................failed
@@ -13,9 +13,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dfaf612098aa19bcb4eda3386fe869e7, findElement {using=class name, value=ico-account}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56160}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56160/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dfaf612098aa19bcb4eda3386fe869e7
+Command: [45b7cbc904bf435cc44218459693a3f3, findElement {using=class name, value=ico-account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59330}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59330/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 45b7cbc904bf435cc44218459693a3f3
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -35,15 +35,15 @@ Session ID: dfaf612098aa19bcb4eda3386fe869e7
 	at ✽.user login to the system successfully(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/Login.feature:7)
 ]]></failure>
     </testcase>
-    <testcase classname="Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="14.791">
+    <testcase classname="Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="12.59">
         <system-out><![CDATA[Given user go to login page.................................................passed
 When user login with "invalid" "saedaXX@mail.com" and "P@ssXXw0rd"..........passed
 And user press on login button..............................................passed
 Then user could not login to the system.....................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Register | users can register with new accounts" name="NEW user can register with valid data successfully" time="44.04">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[class=&quot;result&quot;]&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [baa63196915017f30b6682b57caf32e6, findElement {using=css selector, value=div[class=&quot;result&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56227}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56227/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: baa63196915017f30b6682b57caf32e6" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user open register page...............................................passed
+    <testcase classname="Register | users can register with new accounts" name="NEW user can register with valid data successfully" time="41.586">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[class=&quot;result&quot;]&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [46f199a8af7fe5de4f7c85b88478e304, findElement {using=css selector, value=div[class=&quot;result&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59397}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59397/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 46f199a8af7fe5de4f7c85b88478e304" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user open register page...............................................passed
 When user select gender type................................................passed
 And user type first name "saeed05a44" and last name "mohamed"...............passed
 And user set date of birth..................................................passed
@@ -59,9 +59,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [baa63196915017f30b6682b57caf32e6, findElement {using=css selector, value=div[class="result"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56227}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56227/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: baa63196915017f30b6682b57caf32e6
+Command: [46f199a8af7fe5de4f7c85b88478e304, findElement {using=css selector, value=div[class="result"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59397}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59397/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 46f199a8af7fe5de4f7c85b88478e304
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -81,44 +81,44 @@ Session ID: baa63196915017f30b6682b57caf32e6
 	at ✽.success message is displayed(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/Register.feature:12)
 ]]></failure>
     </testcase>
-    <testcase classname="F04 User could search for any product" name="1 user could search using product name" time="8.936">
+    <testcase classname="F04 User could search for any product" name="1 user could search using product name" time="9.208">
         <system-out><![CDATA[When user clicks in search filed............................................passed
 And user Type product name as "book"........................................passed
 Then user find relevant products............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F04 User could search for any product" name="1 user could search using product name 2" time="9.414">
+    <testcase classname="F04 User could search for any product" name="1 user could search using product name 2" time="7.491">
         <system-out><![CDATA[When user clicks in search filed............................................passed
 And user Type product name as "laptop"......................................passed
 Then user find relevant products............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F04 User could search for any product" name="1 user could search using product name 3" time="10.492">
+    <testcase classname="F04 User could search for any product" name="1 user could search using product name 3" time="8.009">
         <system-out><![CDATA[When user clicks in search filed............................................passed
 And user Type product name as "nike"........................................passed
 Then user find relevant products............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku" time="17.593">
+    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku" time="17.472">
         <system-out><![CDATA[When user clicks in search filed............................................passed
 And user Type product sku as "SCI_FAITH"....................................passed
 Then "SCI_FAITH" shown in result page.......................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku 2" time="18.614">
+    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku 2" time="17.148">
         <system-out><![CDATA[When user clicks in search filed............................................passed
 And user Type product sku as "APPLE_CAM"....................................passed
 Then "APPLE_CAM" shown in result page.......................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku 3" time="18.152">
+    <testcase classname="F04 User could search for any product" name="2&#9;user could search for product using sku 3" time="18.563">
         <system-out><![CDATA[When user clicks in search filed............................................passed
 And user Type product sku as "SF_PRO_11"....................................passed
 Then "SF_PRO_11" shown in result page.......................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="user can add products to wishlist" name="success message is visible after adding product to wishlist" time="27.316">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;bar-notification success&quot;]&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9104a107f91f4a6732937bf3607c7adb, findElement {using=xpath, value=//div[@class=&quot;bar-notification success&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56447/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9104a107f91f4a6732937bf3607c7adb" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user add product to wishlist...........................................passed
+    <testcase classname="user can add products to wishlist" name="success message is Display after adding product to wishlist" time="26.451">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;bar-notification success&quot;]&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [42359322d63b9b12dc6f6bdbe5385849, findElement {using=xpath, value=//div[@class=&quot;bar-notification success&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59633}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59633/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 42359322d63b9b12dc6f6bdbe5385849" type="org.openqa.selenium.NoSuchElementException"><![CDATA[And user add product to wishlist............................................passed
 Then wishlist notification success appear...................................failed
 
 StackTrace:
@@ -128,9 +128,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9104a107f91f4a6732937bf3607c7adb, findElement {using=xpath, value=//div[@class="bar-notification success"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56447}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56447/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9104a107f91f4a6732937bf3607c7adb
+Command: [42359322d63b9b12dc6f6bdbe5385849, findElement {using=xpath, value=//div[@class="bar-notification success"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59633}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59633/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 42359322d63b9b12dc6f6bdbe5385849
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -145,52 +145,17 @@ Session ID: 9104a107f91f4a6732937bf3607c7adb
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-	at org.example.pages.homePage.getsuccessMsg(homePage.java:233)
-	at org.example.stepDefs.WishlistStepDef.wishlist_notification_success_appear(WishlistStepDef.java:19)
+	at org.example.pages.homePage.successMsg(homePage.java:231)
+	at org.example.stepDefs.WishlistStepDef.wishlist_notification_success_appear(WishlistStepDef.java:18)
 	at ✽.wishlist notification success appear(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/Wishlist.feature:6)
 ]]></failure>
     </testcase>
-    <testcase classname="user can add products to wishlist" name="added product is displayed in wishlist page" time="26.607">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;bar-notification success&quot;]&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [257ab1254d8cc1f3aac66a4e2c9455d4, findElement {using=xpath, value=//div[@class=&quot;bar-notification success&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56482}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56482/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 257ab1254d8cc1f3aac66a4e2c9455d4" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user add product to wishlist again.....................................passed
-Then wishlist notification success appear...................................failed
-And user go to wishlist page................................................skipped
-Then number of quantity is greater than zero in wishlist page...............skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="bar-notification success"]"}
-  (Session info: chrome=106.0.5249.119)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-VUMCDGC', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [257ab1254d8cc1f3aac66a4e2c9455d4, findElement {using=xpath, value=//div[@class="bar-notification success"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56482}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56482/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 257ab1254d8cc1f3aac66a4e2c9455d4
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-	at org.example.pages.homePage.getsuccessMsg(homePage.java:233)
-	at org.example.stepDefs.WishlistStepDef.wishlist_notification_success_appear(WishlistStepDef.java:19)
-	at ✽.wishlist notification success appear(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/Wishlist.feature:10)
-]]></failure>
-    </testcase>
-    <testcase classname="F03  User could search home page products using Euro currency" name="User could switch between currencies US-Euro" time="10.749">
+    <testcase classname="F03  User could search home page products using Euro currency" name="User could switch between currencies US-Euro" time="9.503">
         <system-out><![CDATA[When user select euro currency..............................................passed
 Then user can find euro symbol displayed in home page products..............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="user could select home page sliders" name="2:  first slider is clickable on home page" time="10.628">
+    <testcase classname="user could select home page sliders" name="2:  first slider is clickable on home page" time="9.373">
         <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on first slider............................................passed
 And user select product of first slider.....................................passed
 Then user go to first product page..........................................failed
@@ -203,12 +168,12 @@ java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-102
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at org.example.pages.homePage.getFirstSliderProductUrl(homePage.java:159)
+	at org.example.pages.homePage.getFirstSliderProductUrl(homePage.java:158)
 	at org.example.stepDefs.homeSlidersStepDef.user_go_first_product_page(homeSlidersStepDef.java:22)
 	at ✽.user go to first product page(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/homeSliders.feature:6)
 ]]></failure>
     </testcase>
-    <testcase classname="user could select home page sliders" name="2: second slider is clickable on home page" time="10.439">
+    <testcase classname="user could select home page sliders" name="2: second slider is clickable on home page" time="9.119">
         <failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on second slider...........................................passed
 And user select product of Second slider....................................passed
 Then user go to second product page.........................................failed
@@ -221,12 +186,12 @@ java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but f
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at org.example.pages.homePage.getSecondSliderProductUrl(homePage.java:187)
+	at org.example.pages.homePage.getSecondSliderProductUrl(homePage.java:186)
 	at org.example.stepDefs.homeSlidersStepDef.user_go_second_product_page(homeSlidersStepDef.java:37)
 	at ✽.user go to second product page(file:///C:/Users/DELL/Desktop/E-commerce-App-FWD/src/main/resources/features/homeSliders.feature:11)
 ]]></failure>
     </testcase>
-    <testcase classname="F05  user could hover categories and select sub Category" name="user could hover categories" time="23.114">
+    <testcase classname="F05  user could hover categories and select sub Category" name="user could hover categories" time="22.752">
         <system-out><![CDATA[When user could hover categories and select sub Category....................passed
 ]]></system-out>
     </testcase>

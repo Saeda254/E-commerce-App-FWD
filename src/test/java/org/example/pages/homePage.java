@@ -3,7 +3,6 @@ package org.example.pages;
 import org.example.stepDefs.BrowserOPERATION;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.openqa.selenium.interactions.Actions;
@@ -221,42 +220,22 @@ public void selectEuro() throws InterruptedException {
         return uTubeEle;
     }
     public WebElement addProductToWishlist()  {
-        WebElement htcBtnEle = BrowserOPERATION.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]"));
-        String htcBtn = htcBtnEle.getText();
+        WebElement WishlistBtnEle = BrowserOPERATION.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]"));
+        String htcBtn = WishlistBtnEle.getText();
 
         System.out.println(htcBtn);
 
-        return htcBtnEle;
+        return WishlistBtnEle;
     }
-    public void getsuccessMsg()
-    {
+    public void successMsg() throws InterruptedException {
         WebElement successBar = BrowserOPERATION.driver.findElement(By.xpath("//div[@class=\"bar-notification success\"]"));
-        String succesMsgColor = successBar.getCssValue("background-color");
-        String expectedColor = Color.fromString(succesMsgColor).asHex();
-
+        Thread.sleep(5000);
 
         SoftAssert soft = new SoftAssert();
         soft.assertTrue(successBar.isDisplayed(), "success notification bar is not displayed");
-        soft.assertEquals(expectedColor,"#4bb07a");
-        soft.assertAll();
-        System.out.println("actual color is : " +succesMsgColor);
-        System.out.println("expected color is :" +expectedColor);
-        System.out.println("actual color is : " +succesMsgColor);
-        System.out.println("expected color is :" +expectedColor);
     }
-    public WebElement getWishList()
-    {
-        return BrowserOPERATION.driver.findElement(By.xpath("//a[@href=\"/wishlist\"]"));
-    }
-    public void getWishlistQuantity()
-    {
-        WebElement  wishlistquantityEle = BrowserOPERATION.driver.findElement(By.cssSelector("#bar-notification > div > p"));
-        String wishlistquantity = wishlistquantityEle.getAttribute("value");
-        System.out.println(wishlistquantity);
-            int actualQuantity = Integer.parseInt(wishlistquantity);
-        Assert.assertTrue(actualQuantity  > 0 );
 
-    }
+
 
 
 

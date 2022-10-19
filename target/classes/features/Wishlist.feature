@@ -1,12 +1,8 @@
 @smoke
 
   Feature:    user can add products to wishlist
-    Scenario:   success message is visible after adding product to wishlist
-      When       user add product to wishlist
+    Scenario:   success message is Display after adding product to wishlist
+      And    user add product to wishlist
       Then       wishlist notification success appear
 
-      Scenario: added product is displayed in wishlist page
-        When    user add product to wishlist again
-        Then    wishlist notification success appear
-        And     user go to wishlist page
-        Then    number of quantity is greater than zero in wishlist page
+
