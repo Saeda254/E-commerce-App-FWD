@@ -4,11 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.P02_login;
+import org.example.pages.loginpage;
 
 
-public class D02_loginStepDef {
-    P02_login login = new P02_login();
+public class loginStepDef {
+    loginpage login = new loginpage();
 
     @Given("user go to login page")
     public void user_go_to_login_page()

@@ -1,12 +1,12 @@
 package org.example.stepDefs;
 
 import io.cucumber.java.en.When;
-import org.example.pages.P03_homePage;
+import org.example.pages.homePage;
 
 
-public class D05_hoverCategoriesStepDef {
+public class hoverCategoriesStepDef {
 
-    P03_homePage category = new P03_homePage();
+    homePage category = new homePage();
     @When("user could hover categories and select sub Category")
     public void user_hover_categories() throws InterruptedException {
 

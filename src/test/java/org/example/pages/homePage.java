@@ -1,6 +1,6 @@
 package org.example.pages;
 
-import org.example.stepDefs.Hooks;
+import org.example.stepDefs.BrowserOPERATION;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
@@ -11,11 +11,11 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.ArrayList;
-public class P03_homePage {
+
+public class homePage {
 
 public void selectEuro() throws InterruptedException {
-    WebElement euro = Hooks.driver.findElement(By.name("customerCurrency"));
+    WebElement euro = BrowserOPERATION.driver.findElement(By.name("customerCurrency"));
     Select select = new Select(euro);
     Thread.sleep(2000);
     select.selectByValue("https://demo.nopcommerce.com/changecurrency/6?returnUrl=%2F");
@@ -23,26 +23,25 @@ public void selectEuro() throws InterruptedException {
     }
         public void euroSymbol()
         {
-          int count =  Hooks.driver.findElements(By.cssSelector("Span[class=\"price actual-price\"]")).size();
+          int count =  BrowserOPERATION.driver.findElements(By.cssSelector("Span[class=\"price actual-price\"]")).size();
           for (int x = 0; x<count; x++)
           {
-            String text = Hooks.driver.findElements(By.cssSelector("Span[class=\"price actual-price\"]")).get(x).getText();
+            String text = BrowserOPERATION.driver.findElements(By.cssSelector("Span[class=\"price actual-price\"]")).get(x).getText();
             Assert.assertTrue(text.contains("€"));
           }
     }
 
 
-        public WebElement searchBox()
+        public void searchBox()
         {
             By searchBox =  By.id("small-searchterms");
-            WebElement searchBoxEle = Hooks.driver.findElement(searchBox);
-            return searchBoxEle;
+            WebElement searchBoxEle = BrowserOPERATION.driver.findElement(searchBox);
         }
          public WebElement searchBtn()
         {
         By searchBtn =  By.className("button-1");
-        WebElement searchBtnEle = Hooks.driver.findElement(searchBtn);
-        String searchUrl = Hooks.driver.getCurrentUrl();
+        WebElement searchBtnEle = BrowserOPERATION.driver.findElement(searchBtn);
+        String searchUrl = BrowserOPERATION.driver.getCurrentUrl();
         System.out.println(searchUrl);
         String expectedUrl = "https://demo.nopcommerce.com/search?";
         Assert.assertTrue(expectedUrl.contains(searchUrl));
@@ -53,31 +52,31 @@ public void selectEuro() throws InterruptedException {
         public void typeProductName(String productname)
         {
 
-            int pcount = Hooks.driver.findElements(By.id("small-searchterms")).size();
+            int pcount = BrowserOPERATION.driver.findElements(By.id("small-searchterms")).size();
             for (int x = 0; x<pcount; x++)
             {
-                Hooks.driver.findElements(By.id("small-searchterms")).get(x).sendKeys(productname);
+                BrowserOPERATION.driver.findElements(By.id("small-searchterms")).get(x).sendKeys(productname);
             }
 
         }
         public void searchResult()
         {
 
-            int item = Hooks.driver.findElements(By.id("small-searchterms")).size();
+            int item = BrowserOPERATION.driver.findElements(By.id("small-searchterms")).size();
             for (int x = 0; x<item; x++)
             {
-                 String itemname =   Hooks.driver.findElements(By.className("product-item")).get(x).getText();
-                 String searchinput =  Hooks.driver.findElements(By.id("small-searchterms")).get(x).getText();
+                 String itemname =   BrowserOPERATION.driver.findElements(By.className("product-item")).get(x).getText();
+                 String searchinput =  BrowserOPERATION.driver.findElements(By.id("small-searchterms")).get(x).getText();
                  Assert.assertTrue(itemname.contains(searchinput));
             }
         }
 
         public void typeProductSku(String sku) throws InterruptedException
         {
-            int scount = Hooks.driver.findElements(By.id("small-searchterms")).size();
+            int scount = BrowserOPERATION.driver.findElements(By.id("small-searchterms")).size();
              for (int x = 0; x<scount; x++)
              {
-            Hooks.driver.findElements(By.id("small-searchterms")).get(x).sendKeys(sku);
+            BrowserOPERATION.driver.findElements(By.id("small-searchterms")).get(x).sendKeys(sku);
             Thread.sleep(2000);
              }
         }
@@ -85,9 +84,9 @@ public void selectEuro() throws InterruptedException {
         public void skuResult(String sku) throws InterruptedException {
 
 
-            Hooks.driver.findElement(By.className("picture")).click();
+            BrowserOPERATION.driver.findElement(By.className("picture")).click();
            Thread.sleep(3000);
-            String actualsku =  Hooks.driver.findElement(By.className("sku")).getText();
+            String actualsku =  BrowserOPERATION.driver.findElement(By.className("sku")).getText();
             System.out.println("actual  " + actualsku);
             System.out.println("expected  " + sku);
             String tag = "SKU: ";
@@ -96,9 +95,9 @@ public void selectEuro() throws InterruptedException {
 
 
 
-        public void hoverCategories() throws InterruptedException {
-            Actions action = new Actions(Hooks.driver);
-            List<WebElement> mainCategories = Hooks.driver.findElements
+        public void hoverCategories() {
+            Actions action = new Actions(BrowserOPERATION.driver);
+            List<WebElement> mainCategories = BrowserOPERATION.driver.findElements
                     (By.xpath("//ul[@class=\"top-menu notmobile\"]/li"));
             int count = mainCategories.size();
             System.out.println(count);
@@ -111,9 +110,9 @@ public void selectEuro() throws InterruptedException {
 
 
 
-            String locator = "(//ul[@class='top-menu notmobile']//ul)[" +Integer.toString(selectedMainCategory+1)+"]/li";
-            List<WebElement> subCategoryLinks = Hooks.driver.findElements(By.xpath(locator));
-            Hooks.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            String locator = "(//ul[@class='top-menu notmobile']//ul)[" + (selectedMainCategory + 1) +"]/li";
+            List<WebElement> subCategoryLinks = BrowserOPERATION.driver.findElements(By.xpath(locator));
+            BrowserOPERATION.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
             if(!subCategoryLinks.isEmpty())
             {
@@ -123,22 +122,22 @@ public void selectEuro() throws InterruptedException {
                 String selectedSubCategoryName = subCategoryLinks.get(selectedSubCategory).getText();
                 System.out.println("The selected sub category name is  " + selectedSubCategoryName);
                 subCategoryLinks.get(selectedSubCategory).click();
-                String subCategoryTitle = Hooks.driver.getCurrentUrl();
+                String subCategoryTitle = BrowserOPERATION.driver.getCurrentUrl();
                 System.out.println("Sub Category Title is :" + subCategoryTitle);
                 Assert.assertTrue(subCategoryTitle.contains(selectedSubCategoryName.toLowerCase().trim()));            }
             else
             {
                 mainCategories.get(selectedMainCategory).click();
 
-                Assert.assertTrue(Hooks.driver.getCurrentUrl().contains(selectedMainCategoryName.toLowerCase().trim()));
+                Assert.assertTrue(BrowserOPERATION.driver.getCurrentUrl().contains(selectedMainCategoryName.toLowerCase().trim()));
             }
 
-            Hooks.driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+            BrowserOPERATION.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         }
 
     public WebElement locateFirstSlider() throws InterruptedException {
         By firstSlider = By.xpath("//a[@rel=\"0\"]");
-        WebElement firstSliderEle = Hooks.driver.findElement(firstSlider);
+        WebElement firstSliderEle = BrowserOPERATION.driver.findElement(firstSlider);
         Thread.sleep(1000);
 
         System.out.println(firstSliderEle.getText());
@@ -146,15 +145,15 @@ public void selectEuro() throws InterruptedException {
     }
     public WebElement selectFirstProduct() throws InterruptedException {
         By firstSliderProduct =  By.xpath("//*[@id=\"nivo-slider\"]/a[1]");
-        WebElement firstSliderProductEle = Hooks.driver.findElement(firstSliderProduct);
+        WebElement firstSliderProductEle = BrowserOPERATION.driver.findElement(firstSliderProduct);
         Thread.sleep(1000);
         return firstSliderProductEle;
     }
     public void getFirstSliderProductUrl()
     {
 
-        String firstSliderProductUrl = Hooks.driver.getCurrentUrl();
-        Hooks.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        String firstSliderProductUrl = BrowserOPERATION.driver.getCurrentUrl();
+        BrowserOPERATION.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(firstSliderProductUrl);
         String expectedUrl = "https://demo.nopcommerce.com/nokia-lumia-1020";
         Assert.assertEquals(firstSliderProductUrl, expectedUrl);
@@ -164,7 +163,7 @@ public void selectEuro() throws InterruptedException {
 
     public WebElement locateSecondSlider() throws InterruptedException {
         By secondSlider =  By.xpath("//a[@rel=\"1\"]");
-        WebElement secondSliderEle = Hooks.driver.findElement(secondSlider);
+        WebElement secondSliderEle = BrowserOPERATION.driver.findElement(secondSlider);
         Thread.sleep(1000);
         System.out.println(secondSliderEle.getText());
         return secondSliderEle;
@@ -172,7 +171,7 @@ public void selectEuro() throws InterruptedException {
 
     public WebElement selectSecondProduct() throws InterruptedException {
         By SecondSliderProduct =   By.xpath("//*[@id=\"nivo-slider\"]/a[2]");
-        WebElement secondSliderProductEle = Hooks.driver.findElement(SecondSliderProduct);
+        WebElement secondSliderProductEle = BrowserOPERATION.driver.findElement(SecondSliderProduct);
 
         Thread.sleep(1000);
 
@@ -181,8 +180,8 @@ public void selectEuro() throws InterruptedException {
     public void getSecondSliderProductUrl()
     {
 
-        String SecondSliderProductUrl = Hooks.driver.getCurrentUrl();
-        Hooks.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        String SecondSliderProductUrl = BrowserOPERATION.driver.getCurrentUrl();
+        BrowserOPERATION.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(SecondSliderProductUrl);
         String expectedUrl = "https://demo.nopcommerce.com/iphone-6";
         Assert.assertEquals(SecondSliderProductUrl, expectedUrl);
@@ -191,7 +190,7 @@ public void selectEuro() throws InterruptedException {
 
     public WebElement clickfacebookLink()
     {
-        WebElement faceBookEle = Hooks.driver.findElement(By.cssSelector("a[href=\"http://www.facebook.com/nopCommerce\"]"));
+        WebElement faceBookEle = BrowserOPERATION.driver.findElement(By.cssSelector("a[href=\"http://www.facebook.com/nopCommerce\"]"));
         String faceBookLink = faceBookEle.getText();
         System.out.println(faceBookLink);
         return faceBookEle;
@@ -199,7 +198,7 @@ public void selectEuro() throws InterruptedException {
 
     public WebElement clickTwitterLink()
     {
-        WebElement twitterEle = Hooks.driver.findElement(By.cssSelector("a[href=\"https://twitter.com/nopCommerce\"]"));
+        WebElement twitterEle = BrowserOPERATION.driver.findElement(By.cssSelector("a[href=\"https://twitter.com/nopCommerce\"]"));
         String twitterLink = twitterEle.getText();
         System.out.println(twitterLink);
         return twitterEle;
@@ -207,7 +206,7 @@ public void selectEuro() throws InterruptedException {
 
     public WebElement clickRssLink()
     {
-        WebElement rssEle = Hooks.driver.findElement(By.className("rss"));
+        WebElement rssEle = BrowserOPERATION.driver.findElement(By.className("rss"));
         String rssLink = rssEle.getText();
         System.out.println(rssLink);
         return rssEle;
@@ -216,13 +215,13 @@ public void selectEuro() throws InterruptedException {
 
     public WebElement clickUtubeLink()
     {
-        WebElement uTubeEle = Hooks.driver.findElement(By.className("youtube"));
+        WebElement uTubeEle = BrowserOPERATION.driver.findElement(By.className("youtube"));
         String uTubeLink = uTubeEle.getText();
         System.out.println(uTubeLink);
         return uTubeEle;
     }
     public WebElement addProductToWishlist()  {
-        WebElement htcBtnEle = Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]"));
+        WebElement htcBtnEle = BrowserOPERATION.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]"));
         String htcBtn = htcBtnEle.getText();
 
         System.out.println(htcBtn);
@@ -231,7 +230,7 @@ public void selectEuro() throws InterruptedException {
     }
     public void getsuccessMsg()
     {
-        WebElement successBar = Hooks.driver.findElement(By.xpath("//div[@class=\"bar-notification success\"]"));
+        WebElement successBar = BrowserOPERATION.driver.findElement(By.xpath("//div[@class=\"bar-notification success\"]"));
         String succesMsgColor = successBar.getCssValue("background-color");
         String expectedColor = Color.fromString(succesMsgColor).asHex();
 
@@ -247,15 +246,14 @@ public void selectEuro() throws InterruptedException {
     }
     public WebElement getWishList()
     {
-        WebElement wishListEle = Hooks.driver.findElement(By.xpath("//a[@href=\"/wishlist\"]"));
-        return wishListEle;
+        return BrowserOPERATION.driver.findElement(By.xpath("//a[@href=\"/wishlist\"]"));
     }
     public void getWishlistQuantity()
     {
-        WebElement  wishlistquantityEle = Hooks.driver.findElement(By.xpath("//input[@value=\"1\"]"));
+        WebElement  wishlistquantityEle = BrowserOPERATION.driver.findElement(By.cssSelector("#bar-notification > div > p"));
         String wishlistquantity = wishlistquantityEle.getAttribute("value");
         System.out.println(wishlistquantity);
-            Integer actualQuantity = Integer.parseInt(wishlistquantity);
+            int actualQuantity = Integer.parseInt(wishlistquantity);
         Assert.assertTrue(actualQuantity  > 0 );
 
     }

@@ -8,28 +8,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Hooks {
+public class BrowserOPERATION {
     public static WebDriver driver = null;
 
 
     @Before
     public static void openBrowser()
     {
-    // 1- Defining Bridge
+    //  SET DRIVER
         WebDriverManager.chromedriver().setup();
-        // 2- Create new Object from chromedriver()
         driver = new ChromeDriver();
-        // 3- configurations
+        // SET CONFIGURATION
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        // 4- Navigate to the website https://demo.nopcommerce.com/
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        // OPEN the website
         driver.navigate().to("https://demo.nopcommerce.com/");
     }
 
 
     @After
     public static void quitDriver() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         driver.quit();
     }
 

@@ -1,13 +1,12 @@
 package org.example.stepDefs;
 
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pages.P03_homePage;
+import org.example.pages.homePage;
 
-public class D06_homeSlidersStepDef {
-    P03_homePage slider = new P03_homePage();
+public class homeSlidersStepDef {
+    homePage slider = new homePage();
     @When("user clicks on first slider")
     public void user_clicks_first_slider() throws InterruptedException {
        slider.locateFirstSlider().click();
